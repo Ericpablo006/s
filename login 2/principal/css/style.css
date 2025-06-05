@@ -1,0 +1,654 @@
+/* importar as fontes posppins e lobster  */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@400;700&display=swap');
+
+:root {
+    /* fontes */
+    --fonte-principal: "Poppins", serif;
+    --fonte-segundaria: "Lobster", sans-serif;
+    /* paleta de cores */
+    --cor-principal: #747dff;
+    --cor-destaque: #ffad32;
+    --cor-principal-alpha: #747dff3c;
+    --cor-grediente-01: #ffe7c2;
+    --cor-grediente-02: #bdacff;
+    --cor-01: #f9f9f9;
+    --cor-02: #b8c0c7;
+    --cor-03: #767f86;
+    --cor-04: #3c4852;
+    --cor-05: #00000043;
+
+    /* Box shadow */
+    --sombra: 0 0.3rem 0.4rem 0.1rem var(--cor-05);
+}
+
+/* limpa as configurações dos navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-family: var(--fonte-principal);
+    font-size: 18px;
+}
+body {
+    color: var(--cor-04);
+}
+
+/* Barra de navegação fixa,com menu */
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-colo 0.5s ease;
+
+    background-color: var(--cor-principal-alpha);
+    padding: 0.6rem 3rem;
+    color: var(--cor-01);
+    letter-spacing: 0.1rem;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    top: 0;
+    left: 0;
+}
+
+.navbar-solida {
+    background-color: var(--cor-principal);
+}
+
+.logo {
+    font-family: var(--fonte-segundaria);
+    font-size: 1.5rem;
+}
+
+.menu a,.drop-content a {
+    text-decoration: none;
+    color: var(--cor-01);
+    font-weight: 700;
+    padding: 0.6rem 1rem;
+    transition: 0.5s;
+}
+
+.menu a:hover,.drop-content a:hover{
+    color: var(--cor-destaque);
+}
+
+/* ===== Banner e calendário ===== */
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url(../img/Design\ sem\ nome\ \(4\).png);
+    background-size: cover;
+background-position: 50% 50%;
+    height: 96vh;
+}
+ 
+header div {
+    width: 100%;
+}
+
+.booking {
+    background-color: var(--cor-principal-alpha);
+    padding: 0.8rem 3rem;
+}
+
+.booking form {
+    background-color: var(--cor-01);
+    color: var(--cor-03);
+    padding: 1rem 1.4rem;
+    display: flex;
+    align-items: end;
+    border-radius: 0.2rem;
+}
+
+form label {
+    display: block;
+}
+
+form input {
+    font-size: 1rem;
+    width: 80%;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    border: solid 0.1rem var(--cor-02);
+}
+
+button { 
+    background-color: var(--cor-destaque);
+    color: var(--cor-01);
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.6rem 1.6rem;
+    border-radius: 0.5rem;
+    border: none;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color:var(--cor-principal);
+    cursor: pointer;
+}
+
+section {
+    margin: 2.5rem auto;
+    padding: 6rem 3rem;
+    min-width: 100vh;
+}
+
+/* ===== section: kits ===== */
+
+.kits {
+    display: flex;
+}
+
+.kits h1 {
+    font-family: var(--fonte-segundaria);
+    color: var(--cor-principal);
+}
+
+.kits hr {
+    margin: 1rem 0;
+    border: solid var(--cor-destaque);
+    border-radius: 1rem;
+    width: 15rem;
+}
+
+.kits p {
+    margin: 1rem 0;
+}
+
+.inf-kits {
+    text-align: justify;
+    padding-right: 3rem;
+    flex: 1;
+}
+
+.fotos-kits {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    flex: 1;
+}
+
+.foto {
+    width: calc(50% - 0.5rem);
+    border: solid 0.6rem var(--cor-01);
+    border-radius: 0.5rem;
+    box-shadow: var(--sombra);
+}
+
+.foto img {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+/*  ===== section: Agendamento ===== */
+
+.Agendamento {
+    background: linear-gradient(50deg,var(--cor-grediente-02),var(--cor-grediente-01));
+}
+
+.Agendamento h1 {
+    font-family: var(--fonte-segundaria);
+    color: var(--cor-principal);
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.grupo-kits {
+    padding: 0 3rem;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 3rem 1.2rem;
+}
+
+.card-kits {
+    padding: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cor-01);
+    border-radius: 0.5rem;
+    box-shadow: var(--sombra);
+}
+
+.card-kits img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.3rem;
+}
+
+.card-kits > div {
+    padding: 1rem;
+}
+
+.card-kits samp {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.card-kits p {
+    margin: 1rem 0;
+    text-align: justify;
+    color: var(--cor-03);
+}
+
+.valor {
+    display: flex;
+    justify-content: end;
+    align-items: baseline;
+    margin: 1rem auto;
+}
+
+.valor div{
+    display: flex;
+    justify-content: start;
+    align-items: end;
+}
+
+.valor samp {
+    text-decoration: line-through;
+    font-size: 0.8rem;
+    color: var(--cor-03);
+    margin-left: 0.5rem;
+}
+
+.card-btn {
+    text-align: right;
+}
+
+/* section: Avaliações */
+.avaliacoes {
+    text-align: center;
+    width: 75%;
+    min-height: 50vh;
+    margin: 1rem auto;
+    padding: 6rem 3rem 2rem;
+}
+
+.avaliacoes h1 {
+    font-family: var(--fonte-segundaria);
+    color: var(--cor-principal);
+}
+
+.avaliacoes p {
+    margin: 1rem auto;
+    color: var(--cor-03);
+}
+
+.avaliacoes img {
+    border: solid 0.2rem var(--cor-destaque);
+    border-radius: 50%;
+    background-color: var(--cor-destaque);
+    outline: none;
+    width: 10rem; 
+}
+
+.avaliacoes samp {
+    font-weight: 700;
+}
+
+.carrocel {
+    position: relative;
+    padding: 0 5rem;
+    margin: auto;
+}
+
+.carrocel img {
+    position: center;
+    border: 0.2rem;
+    border-radius: 50%;
+    /* outline: none; */
+    width: 10rem; 
+}
+
+.carrocel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(- 50%);
+    background-color: var(--cor-05);
+    color: var(--cor-01);
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: 0.3s;
+}
+
+.carrocel button {
+    background-color: var(--cor-03);
+}
+
+.anterior {
+    left: 0;
+}
+
+.proximo {
+    right: 0;
+}
+
+/* ===== rodapé ===== */
+footer {
+    background-color: var(--cor-04);
+    color: var(--cor-02);
+    padding: 2rem 5rem;
+    display: flex;
+    font-size: 0.8rem;
+}
+
+footer div {
+    flex: 1;
+    padding: 0 0.3rem;
+}
+
+footer h3 {
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+footer .input-group {
+    display: flex;
+    gap: 0.5rem;
+    margin: 1rem 0 1.5rem;
+}
+
+footer input {
+    background-color: var(--cor-01);
+    color: var(--cor-04);
+    letter-spacing: 0.1rem;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.1rem;
+    width: 100%;
+}
+
+footer button {
+    padding: 0.3rem 1.4rem;
+    border-radius: 0.3rem;
+}
+
+footer hr {
+    margin: 1rem 0;
+}
+
+.empresa p {
+    margin: 2rem 0;
+}
+
+.empresa samp {
+    font-weight: 700;
+    display: block;
+}
+
+.rede-social {
+    display: flex;
+    gap: 1rem;
+}
+
+.rede-social i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.2rem;
+    border: solid 0.15rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.rede-social i:hover{
+    color: var(--cor-destaque);
+    border-color: var(--cor-destaque);
+}
+
+.rodape {
+    width: 100%;
+    height: 3rem;
+    background-color: var(--cor-principal);
+}
+
+/* menu hamburgue */
+
+.drop-menu {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.drop-button {
+    padding: 0;
+    padding-bottom: 0.25rem;
+    background-color: inherit;
+}
+
+.barra {
+    width: 2rem;
+    height: 0.28rem;
+    transition: 0.3s;
+    margin-top: 0.3rem;
+    border-radius: 0.2rem;
+    background-color: var(--cor-01);
+}
+
+.drop-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    top: 3rem;
+    right: 0;
+    background-color: var(--cor-principal);
+    box-shadow: var(--sombra);
+}
+
+#botao-menu:hover .drop-content {
+    display: block;
+}
+
+.drop-content a {
+    display: block;
+}
+
+.drop-content a:hover {
+    color: var(--cor-destaque);
+}
+
+.drop-menu a:hover .drop-content {
+    display: block;
+}
+
+/* midia queries  */
+@media (min-width: 0px) {
+    nav {
+        padding: 0;
+        padding-left: 1rem;
+        background-color: var(--cor-principal);
+    }
+
+    .drop-content {
+        background-color: var(--cor-principal);
+    }
+
+    .menu {display: none;
+    }
+
+    .drop-menu {
+        display: block;
+    }
+
+    /* header */
+
+    .booking {
+        padding: 0.8rem;
+    }
+
+    .booking form {
+        flex-direction: column;
+    }
+
+    form input {
+        width: 100%;
+        margin-bottom: 0.6rem;
+    }
+
+    section {
+        padding: 6rem 2rem;
+    }
+
+    /* kits*/
+
+    .kits {
+        flex-direction: column;
+    }
+
+    .fotos-kits {
+        margin-top: 3rem;
+    }
+
+    .foto {
+        width: 100%;
+    }
+
+    /* agendamento */
+
+    .grupo-kits {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    /* avaliações */
+    .avaliacoes {
+        width: 100%;
+    }
+
+
+    .carrocel {
+        padding: 0;
+    }
+
+    /* footer */
+
+    footer {
+        padding: 0;
+        flex-direction: column;
+    }
+
+    footer h3 {
+        margin-top: 2rem;
+    }
+
+    .empresa p {
+        margin: 1rem 0;
+    }
+}
+
+@media (min-width: 576px) {
+    section{
+        padding: 6rem 4rem;
+    }
+}
+
+@media (min-width: 768px) {
+    section{
+        padding: 6rem 2rem;
+    }
+
+    .booking {
+        padding: 0.8rem 3rem;
+    }
+
+    .foto {
+        width: calc(50% - 0.5rem);
+    }
+
+    .grupo-kits {
+        padding: 0;
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 3rem 1.2rem;
+    }
+
+    footer {
+        padding: 2rem 6rem;
+    }
+}
+
+@media (min-width: 992px){
+    nav {
+        padding: 0.6rem 3rem;
+        background-color: var(--cor-principal-alpha);
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .drop-menu {
+        display: none;
+    }
+
+    .booking {
+        padding: 0.8rem 3rem;
+    }
+
+    .booking form {
+        flex-direction: row;
+        align-items: last baseline;
+    }
+
+    form input {
+        width: 80%;
+    }
+
+    section {
+        padding: 6rem 3rem;
+    }
+
+    .Kits {
+        flex-direction: row;
+    }
+
+    .info-kits {
+        padding-right: 3rem;
+    }
+
+    .foto {
+        width: 100%;
+    }
+
+    .avaliacoes {
+        width: 75%;
+    }
+
+    footer {
+        flex-direction: row;
+    }
+
+    footer h3 {
+        margin-top: 0;
+    }
+} 
+
+@media (min-width: 1200px){
+    nav {
+        background-color: var(--cor-principal-alpha);
+    }
+
+    .foto {
+        width: calc(50 - 0.5rem);
+    }
+
+    .grupo-kits {
+        grid-template-columns: auto auto auto;
+    }
+
+    .carrocel {
+        padding: 0.5rem;
+    }
+}
